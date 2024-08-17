@@ -160,25 +160,3 @@ const makeTransfer = (amount: number, accountToTransferFrom: Wallet, accountToTr
     }
 }
 
-
-const user = signUp("firstuser", "pwd")
-const secondUser = signUp("seconduser", "pwd")
-
-login(user);
-login(secondUser);
-
-const firstWallet = createWallet(1, 'Dollar', user);
-const secondWallet = createWallet(2, 'Naira', secondUser);
-
-
-
-// console.log(user);  
-// console.log(login(user));
-// console.log(nairaWallet.naira_balance);
-//console.log(deposit_to_wallet(2500, nairaWallet, "Naira"));
-// console.log(dollarWallet.dollar_balance);
-console.log(deposit_to_wallet(250, secondWallet, "Naira"));
-console.log(makeTransfer(50, secondWallet, firstWallet));
-console.log(deleteWallet(secondWallet));
-
-console.log(walletDb);
